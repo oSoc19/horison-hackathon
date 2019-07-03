@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/oSoc19/opt-horison-hackathon/issues"
   },
-  "homepage": "https://github.com/oSoc19/opt-horison-hackathon#readme"
+  "homepage": "https://github.com/oSoc19/opt-horison-hackathon#readme",
+  "dependencies": {
+    "mb-isochrone": "^0.1.0"
+  }
 }
