@@ -1,0 +1,27 @@
+body {
+<<<<<<< HEAD
+    margin:0;
+    padding:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+=======
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+>>>>>>> e5a048a9ed3ac52541280b6b452eca3dbf99f7b7
