@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
     //pitchWithRotate: true,
     //pitch: 60,
     container: 'map', // container id
-    style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
+    style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
     center: userPosition, // starting position [lng, lat]
     zoom: 15 // starting zoom
 });
@@ -2082,7 +2082,7 @@ map.on('load', function () {
             'line-color': {
                 'property': 'time',
                 'type': 'interval',
-                'stops': colorSchemes.altColor.map(function(pair){var edited = [pair[0]-300, pair[1]]; return edited})
+                'stops': colorSchemes.pendleton.map(function(pair){var edited = [pair[0]-300, pair[1]]; return edited})
             },
             'line-opacity': 0.25,
             'line-width': {
@@ -2104,7 +2104,7 @@ map.on('load', function () {
             'line-color': {
                 'property': 'time',
                 'type': 'interval',
-                'stops': colorSchemes.altColor
+                'stops': colorSchemes.pendleton
             },
             'line-width': {
                 base: 1,
@@ -2137,7 +2137,7 @@ map.on('load', function () {
             'text-color': {
                 'property': 'time',
                 'type': 'interval',
-                'stops': colorSchemes.altColor
+                'stops': colorSchemes.pendleton
             },
             'text-halo-width': 12,
         }
@@ -2228,6 +2228,9 @@ map.on('load', function () {
             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
             "text-offset": [0, 1.2],
             "text-anchor": "top"
+        },
+        "paint": {
+            "text-color": "white"
         }
     });
 });
