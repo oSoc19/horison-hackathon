@@ -80,12 +80,17 @@
             var featureCollection = new FeatureCollection();
             var sectomilli = 1000;
             var mintosec = 60;
-            var five = 5;            
-           for( let i of [1, 2, 3, 4, 5, 6]){
+            var five = 5;
+            var NbofIsochrones = 6;
+            var Nbs = [];
+            for(var i = 1; i <= NbofIsochrones; i++)  {
+                Nbs.push(i);
+            }          
+            for( let i of Nbs){
                 await drawIsochrone(i * five * mintosec * sectomilli, "#b10026",featureCollection);
-           }
-           console.log("featureCollection");
-           console.log(featureCollection);
+            }
+            console.log("featureCollection");
+            console.log(featureCollection);
             
         }
         async function drawIsochrone(distance, color,featureColection) {
