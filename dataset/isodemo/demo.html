@@ -89,7 +89,9 @@
             
         }
         async function drawIsochrone(distance, color,featureColection) {
-           const data = await generator.then((x) => x.getIsochrone(distance, true));
+            flipForMapBox = true;
+
+            const data = await generator.then((x) => x.getIsochrone(distance, true));
            // const data = getIsochrone(distance,color);
             const isochrones = data.isochrones;
             console.log("first data");
@@ -102,7 +104,12 @@
                 console.log("start isocrone");
                 console.log(isochrone);
                 console.log("end isochrone");
+                if(flipForMapBox){
+                    polygonData.push(isochrone[0].map((p)=>[p.longitude,p.latitude]));  
+                }
+                else{
                 polygonData.push(isochrone[0].map((p)=>[p.latitude,p.longitude]));
+                }
                 /**
                 for (const ring of isochrone) {
                     if (ring.length === 0) {
@@ -124,7 +131,7 @@
                     console.log(polygonData[0]);
                     console.log("end polygon data");
                     */
-                    featureColection.addFeature(polygonData);
+                    featureColection.addFeature(polygonData,distance);
                 }
                 
             }

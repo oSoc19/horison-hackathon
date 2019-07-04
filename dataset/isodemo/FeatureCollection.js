@@ -3,8 +3,9 @@ class FeatureCollection {
 		this.type = "FeatureCollection",
 		this.features = [];
     }
-    addFeature(polygonData){
-        var feature = new Feature(polygonData);
+    addFeature(polygonData,timeinmillisec){
+        polygonData.push(polygonData[0]);
+        var feature = new Feature(polygonData,timeinmillisec);
         this.features.push(feature);
     }
 
